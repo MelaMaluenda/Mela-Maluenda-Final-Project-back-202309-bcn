@@ -1,7 +1,7 @@
 {
   "name": "express-ts-jest-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "street-photography-contest",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
     "express": "^4.18.2",
     "mongoose": "^8.0.1"
   }
