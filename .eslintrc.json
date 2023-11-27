@@ -1,14 +1,16 @@
 {
   "env": {
     "es2021": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "extends": ["xo", "prettier"],
   "overrides": [
     {
       "extends": ["xo-typescript", "prettier"],
-      "files": ["*.ts", "*.tsx"],
+      "files": ["src/", "*.ts", "*.tsx"],
       "rules": {
+        "no-unused-vars": "error",
         "@typescript-eslint/consistent-type-definitions": ["error", "interface"]
       }
     },
