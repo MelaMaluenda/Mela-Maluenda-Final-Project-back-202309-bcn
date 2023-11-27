@@ -1,8 +1,6 @@
-import chalk from "chalk";
+import "dotenv/config";
+import debugCreator from "debug";
+
+const debug = debugCreator("photos: main");
 
 const port = process.env.PORT ?? 1914;
-
-if (!process.env.MONGODB_URL) {
-  chalk.red("Missing MongoDBconnection");
-  process.exit();
-}
