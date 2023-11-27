@@ -1,6 +1,7 @@
 import "dotenv/config";
 import debugCreator from "debug";
 import chalk from "chalk";
+import "./server/index.js";
 import { connectToDatabase } from "./database/index.js";
 import { startServer } from "./server/app.js";
 
