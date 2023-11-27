@@ -1,7 +1,7 @@
 import { type NextFunction, type Request, type Response } from "express";
 import debugCreator from "debug";
 import CustomError from "../../CustomError/CustomError.js";
-import chalk from "chalk/index.js";
+import chalk from "chalk";
 
 export const notFound = (_req: Request, res: Response, next: NextFunction) => {
   const debug = debugCreator("streetphotography: server: generalError");
