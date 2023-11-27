@@ -36,13 +36,17 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@types/cors": "^2.8.17",
     "@types/debug": "^4.1.12",
+    "@types/morgan": "^1.9.9",
     "chalk": "^4.1.2",
+    "cors": "^2.8.5",
     "debug": "^4.3.4",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jest-ts-webcompat-resolver": "^1.0.0",
     "mongoose": "^8.0.1",
+    "morgan": "^1.10.0",
     "node": "v20.6.0"
   }
 }
