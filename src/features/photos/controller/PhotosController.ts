@@ -1,5 +1,5 @@
-import type PhotosMongosooseRepository from "../repository/PhotosMongoseRepository";
 import type { Request, Response } from "express";
+import type PhotosMongosooseRepository from "../repository/PhotosMongoseRepository.js";
 
 class PhotosController {
   constructor(private readonly photosRepository: PhotosMongosooseRepository) {}
