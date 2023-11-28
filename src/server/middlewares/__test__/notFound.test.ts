@@ -1,19 +1,19 @@
-import { type Request, type Response } from "express";
-import CustomError from "../../CustomError/CustomError";
-import { notFound } from "../error/generalError.js";
+import request from "supertest";
+import "../../../server/index";
+import { app } from "../../app";
 
-describe("Given a notFound middleware", () => {
-  describe("When it receives a next function", () => {
-    test("Then it should call the next function", () => {
-      const req = {};
-      const res = {};
-      const next = jest.fn();
+describe("Given a GET /phototest endpoint", () => {
+  describe("When it receives a request", () => {
+    test("Then it should response with a 404 abd a message 'Endpoint not found'", async () => {
+      const expectedStatusCode = 404;
+      const expectedMessage = "Endpoint not found";
+      const requestedPath = "/phototest";
 
-      const expectedError = new CustomError("Endpoint", 404);
+      const response = await request(app)
+        .get(requestedPath)
+        .expect(expectedStatusCode);
 
-      notFound(req as Request, res as Response, next);
-
-      expect(next).toHaveBeenCalledWith(expect.objectContaining(expectedError));
+      expect(response.body).toHaveProperty("message", expectedMessage);
     });
   });
 });
