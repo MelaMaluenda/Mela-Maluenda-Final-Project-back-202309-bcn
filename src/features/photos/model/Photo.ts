@@ -40,6 +40,6 @@ const photoSchema = new Schema<PhotosData>({
   },
 });
 
-const Photo = model("Photos", photoSchema, "photos");
+const Photo = model("Photos", photoSchema, "contest");
 
 export default Photo;

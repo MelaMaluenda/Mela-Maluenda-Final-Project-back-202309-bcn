@@ -4,6 +4,7 @@ import cors from "cors";
 import { app } from "./app.js";
 import { generalError, notFound } from "./middlewares/error/generalError.js";
 import pingRouter from "../features/ping/router/PingRouter.js";
+import photoRouter from "../features/photos/router/photoRouter.js";
 
 const corsPort = process.env.ALLOWED_ORIGIN;
 const corsOptions = { origin: corsPort };
@@ -13,6 +14,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 app.use("/", pingRouter);
+
+app.use("/photos", photoRouter);
 
 app.use(notFound);
 app.use(generalError);
