@@ -12,3 +12,7 @@ export interface PhotosData {
   whatMadeYouClick: string;
   photoUrl: string;
 }
+
+export interface PhotosRepository {
+  getRobots: () => Promise<PhotosData[]>;
+}
