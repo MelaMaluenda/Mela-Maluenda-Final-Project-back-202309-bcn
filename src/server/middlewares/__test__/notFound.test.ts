@@ -1,19 +1,19 @@
 import request from "supertest";
-import "../../../server/index";
 import { app } from "../../app";
+import "../../../setupTest";
 
-describe("Given a GET /phototest endpoint", () => {
-  describe("When it receives a request", () => {
+describe("Given a GET /photopath endpoint", () => {
+  describe("When it received a request", () => {
     test("Then it should response with a 404 abd a message 'Endpoint not found'", async () => {
-      const expectedStatusCode = 404;
+      const expectedStatus = 404;
       const expectedMessage = "Endpoint not found";
-      const requestedPath = "/phototest";
+      const requestedPath = "/photopath";
 
       const response = await request(app)
         .get(requestedPath)
-        .expect(expectedStatusCode);
+        .expect(expectedStatus);
 
-      expect(response.body).toHaveProperty("message", expectedMessage);
+      expect(response.body).toHaveProperty("error", expectedMessage);
     });
   });
 });
