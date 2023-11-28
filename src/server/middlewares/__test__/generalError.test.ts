@@ -3,7 +3,7 @@ import CustomError from "../../CustomError/CustomError";
 import { generalError } from "../error/generalError";
 
 describe("Given a generalError middleware", () => {
-  describe("Whaen it receives a response", () => {
+  describe("When it receives a response", () => {
     const req = {};
     const res: Pick<Response, "status" | "json"> = {
       status: jest.fn().mockReturnThis(),
@@ -22,7 +22,7 @@ describe("Given a generalError middleware", () => {
 
     test("Then it should call it's method status 500", () => {
       const expectedStatusCode = 500;
-      const error = new Error("Error with status code");
+      const error = new Error("Error without status code");
 
       generalError(error as CustomError, req as Request, res as Response, next);
 

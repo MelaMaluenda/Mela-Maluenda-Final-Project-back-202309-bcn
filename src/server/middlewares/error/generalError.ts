@@ -7,7 +7,7 @@ export const notFound = (_req: Request, res: Response, next: NextFunction) => {
   const debug = debugCreator("streetphotography: server: generalError");
   debug(chalk.red("Endpoint not found"));
 
-  const customError = new CustomError("Endpoint no found", 404);
+  const customError = new CustomError("Endpoint not found", 404);
   next(customError);
 };
 
