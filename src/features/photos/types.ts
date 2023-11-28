@@ -14,5 +14,5 @@ export interface PhotosData {
 }
 
 export interface PhotosRepository {
-  getRobots: () => Promise<PhotosData[]>;
+  getPhotos: () => Promise<PhotosData[]>;
 }

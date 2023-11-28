@@ -1,9 +1,9 @@
-import Photo from "../model/Photo";
+import Photo from "../model/Photo.js";
 import type { PhotosData, PhotosRepository } from "../types";
 
 class PhotosMongosooseRepository implements PhotosRepository {
-  public async getRobots(): Promise<PhotosData[]> {
-    const photos = await Photo.find();
+  public async getPhotos(): Promise<PhotosData[]> {
+    const photos = await Photo.find().limit(10);
 
     return photos;
   }
