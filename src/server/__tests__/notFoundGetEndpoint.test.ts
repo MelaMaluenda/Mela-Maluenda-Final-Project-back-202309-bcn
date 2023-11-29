@@ -1,6 +1,6 @@
 import request from "supertest";
-import { app } from "../../app";
-import "../../../setupTest";
+import { app } from "../app";
+import "../../setupTest";
 
 describe("Given a GET /photopath endpoint", () => {
   describe("When it received a request", () => {

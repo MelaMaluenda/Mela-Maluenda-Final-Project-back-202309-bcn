@@ -1,5 +1,5 @@
 import photosMock from "../../mock/photosMock";
-import type { PhotosRepository } from "../../types";
+import type { PhotosRepository } from "../../repository/types";
 import type { Request, Response } from "express";
 import PhotosController from "../PhotosController";
 
@@ -27,7 +27,7 @@ describe("Given a PhotosController's getPhotos method", () => {
       expect(res.status).toHaveBeenLastCalledWith(expectedStatusCode);
     });
 
-    test("Then it should call it's method with « Ghost », « Urban angel », « Deep thoughts »", async () => {
+    test("Then it should call it's method with Ghost, Urban angel, Deep thoughts", async () => {
       const expectedPhotos = photosMock;
 
       const photosController = new PhotosController(

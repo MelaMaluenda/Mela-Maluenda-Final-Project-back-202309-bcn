@@ -3,11 +3,11 @@ import "../../../../setupTest";
 import Photo from "../../model/Photo";
 import photosMock from "../../mock/photosMock";
 import { app } from "../../../../server/app";
-import type { PhotosData } from "../../types";
+import type { PhotosData } from "../../repository/types";
 
 describe("Given GET /contest endpoint", () => {
   describe("When it receives a request", () => {
-    test("Then it should respond with a status 200 and a list o photos: « Ghost », « Urban angel », « Deep thoughts »", async () => {
+    test("Then it should respond with a status 200 and a list o photos: Ghost, Urban angel, Deep thoughts", async () => {
       const expectedStatus = 200;
       const photosPath = "/photos";
 
