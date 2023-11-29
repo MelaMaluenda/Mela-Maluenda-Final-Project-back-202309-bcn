@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import type { PhotosData } from "../types";
+import type { PhotosData } from "../repository/types";
 
 const photoSchema = new Schema<PhotosData>({
   title: {

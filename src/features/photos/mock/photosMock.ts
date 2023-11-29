@@ -1,9 +1,8 @@
-import { type PhotosData } from "../types";
+import { type PhotosData } from "../repository/types";
 
 const photosMock: PhotosData[] = [
   {
-    _id: "65635f70e627443259cf3ce2",
-    title: "« Ghost »",
+    title: "Ghost",
     author: "Enrique Muda",
     year: "2018",
     location: "Sicilia",
@@ -15,8 +14,7 @@ const photosMock: PhotosData[] = [
     photoUrl: "https://i.ibb.co/r3PQynN/ghost.webp",
   },
   {
-    _id: "656360dae627443259cf3ce4",
-    title: "« Urban angel »",
+    title: "Urban angel",
     author: "Bruce Gilden",
     year: "2014",
     location: "Nueva York",
@@ -28,8 +26,7 @@ const photosMock: PhotosData[] = [
     photoUrl: "https://i.ibb.co/3pDTh18/urban-angel.webp",
   },
   {
-    _id: "6563642be627443259cf3ce8",
-    title: "« Deep thoughts » ",
+    title: "Deep thoughts",
     author: "Matt stuart",
     year: "2012",
     location: "Londres",

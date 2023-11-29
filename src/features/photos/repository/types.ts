@@ -1,7 +1,6 @@
 export type Category = "Long shot" | "Medium shot";
 
 export interface PhotosData {
-  _id: string;
   title: string;
   author: string;
   year: string;
