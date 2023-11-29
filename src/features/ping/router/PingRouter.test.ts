@@ -4,7 +4,7 @@ import { app } from "../../../server/app";
 
 describe("Given a GET / endpoint", () => {
   describe("When it receives a request", () => {
-    test("Then it should respond with message 🏓", async () => {
+    test("Then it should respond it's method status 200 and a message 🏓", async () => {
       const expectedStatus = 200;
       const expectedMessage = "🏓";
       const path = "/";
