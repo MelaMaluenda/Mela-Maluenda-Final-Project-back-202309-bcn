@@ -3,6 +3,10 @@ import type { PhotosRepository } from "../../repository/types";
 import type { Request, Response } from "express";
 import PhotosController from "../PhotosController";
 
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+
 describe("Given a PhotosController's getPhotos method", () => {
   describe("When it receives a response", () => {
     const photosRepository: Pick<PhotosRepository, "getPhotos"> = {
