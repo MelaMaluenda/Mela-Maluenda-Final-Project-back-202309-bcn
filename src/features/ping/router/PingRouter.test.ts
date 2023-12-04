@@ -1,5 +1,5 @@
 import request from "supertest";
-import "../../../setupTest";
+import "../../../setupTests";
 import { app } from "../../../server/app";
 
 describe("Given a GET / endpoint", () => {

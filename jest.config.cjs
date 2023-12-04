@@ -2,6 +2,7 @@
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
+  setupFilesAfterEnv: ["./src/setupTests.ts"],
   testMatch: ["**/src/**/*.test.ts"],
   resolver: "jest-ts-webcompat-resolver",
   collectCoverageFrom: [
@@ -9,6 +10,6 @@ module.exports = {
     "!src/index.ts",
     "!src/server/app.ts",
     "!src/database/index.ts",
-    "!src/setupTest.ts",
+    "!src/setupTests.ts",
   ],
 };
