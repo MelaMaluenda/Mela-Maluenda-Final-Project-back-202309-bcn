@@ -1,5 +1,5 @@
 import request from "supertest";
-import "../../../../setupTest";
+import "../../../../setupTests";
 import Photo from "../../model/Photo";
 import photosMock from "../../mock/photosMock";
 import { app } from "../../../../server/app";
