@@ -9,4 +9,6 @@ const photoController = new PhotosController(photoRepository);
 
 photoRouter.get("/", photoController.getPhotos);
 
+photoRouter.delete("/:photoId", photoController.deletePhoto);
+
 export default photoRouter;
