@@ -1,0 +1,34 @@
+{
+  "info": {
+    "_postman_id": "ad8b771a-daa0-401a-99b9-702b3f1ebab3",
+    "name": "Street Photography",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30652454"
+  },
+  "item": [
+    {
+      "name": "ping",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "/photos",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "error",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
