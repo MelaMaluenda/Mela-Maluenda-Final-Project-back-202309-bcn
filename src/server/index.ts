@@ -9,7 +9,12 @@ import {
 import pingRouter from "../features/ping/router/PingRouter.js";
 import photoRouter from "../features/photos/router/photoRouter.js";
 
-const corsOptions = { origin: process.env.ALLOWED_ORIGIN };
+const allowedOrigins = [
+  process.env.ALLOWED_ORIGIN!,
+  process.env.ALLOWED_ORIGIN_PROD!,
+];
+
+const corsOptions = { origin: allowedOrigins };
 app.use(cors(corsOptions));
 
 app.use(morgan("dev"));
