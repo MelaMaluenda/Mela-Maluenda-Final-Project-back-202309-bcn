@@ -1,6 +1,7 @@
 export type Category = "Long shot" | "Medium shot";
 
 export interface PhotosData {
+  _id: string;
   title: string;
   author: string;
   year: string;
@@ -14,4 +15,5 @@ export interface PhotosData {
 
 export interface PhotosRepository {
   getPhotos: () => Promise<PhotosData[]>;
+  deletePhoto: (photoId: string) => Promise<void>;
 }
