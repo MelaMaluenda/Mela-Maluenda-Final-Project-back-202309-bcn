@@ -16,4 +16,5 @@ export interface PhotosData {
 export interface PhotosRepository {
   getPhotos: () => Promise<PhotosData[]>;
   deletePhoto: (photoId: string) => Promise<void>;
+  addPhoto: (photo: PhotosData) => Promise<PhotosData>;
 }

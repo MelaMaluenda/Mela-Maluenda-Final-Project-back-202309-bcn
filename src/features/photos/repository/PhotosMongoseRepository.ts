@@ -18,6 +18,15 @@ class PhotosMongosooseRepository implements PhotosRepository {
       );
     }
   }
+
+  public async addPhoto(photo: PhotosData): Promise<PhotosData> {
+    try {
+      const newPhoto = await Photo.create(photo);
+      return newPhoto;
+    } catch (error) {
+      throw new Error("Error adding a new photo" + (error as Error).message);
+    }
+  }
 }
 
 export default PhotosMongosooseRepository;

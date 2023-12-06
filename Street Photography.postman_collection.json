@@ -8,25 +8,105 @@
   "item": [
     {
       "name": "ping",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\"url\": {\n          \"raw\": \"http://localhost:1984/photos\",\n          \"protocol\": \"http\",\n          \"host\": [\"localhost\"],\n          \"port\": \"1984\",\n          \"path\": [\"\"]\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1984",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984"
+        }
       },
       "response": []
     },
     {
-      "name": "/photos",
+      "name": "photos",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\"url\": {\n          \"raw\": \"http://localhost:1984/photos\",\n          \"protocol\": \"http\",\n          \"host\": [\"localhost\"],\n          \"port\": \"1984\",\n          \"path\": [\"photos\"]\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1984/photos/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984",
+          "path": ["photos", ""]
+        }
       },
       "response": []
     },
     {
-      "name": "error",
+      "name": "Not Found",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\"url\": {\n          \"raw\": \"http://localhost:1984/photos\",\n          \"protocol\": \"http\",\n          \"host\": [\"localhost\"],\n          \"port\": \"1984\",\n          \"path\": [\"/error\"]\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1984/error",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984",
+          "path": ["error"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete photo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\"url\": {\n          \"raw\": \"http://localhost:1984/photos/6563691ee627443259cf3cf6\",\n          \"protocol\": \"http\",\n          \"host\": [\"localhost\"],\n          \"port\": \"1984\",\n          \"path\": [\"photos/6563691ee627443259cf3cf6\"]\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1984/photos/6563691ee627443259cf3cf6",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984",
+          "path": ["photos", "6563691ee627443259cf3cf6"]
+        }
       },
       "response": []
     }
