@@ -2,7 +2,7 @@ import { type NextFunction, type Request, type Response } from "express";
 import { type PhotosRepository } from "../../repository/types";
 import PhotosController from "../PhotosController";
 
-beforeEach(() => {
+afterEach(() => {
   jest.clearAllMocks();
 });
 

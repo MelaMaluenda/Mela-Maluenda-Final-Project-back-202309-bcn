@@ -10,23 +10,82 @@
       "name": "ping",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:1984",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984"
+        }
       },
       "response": []
     },
     {
-      "name": "/photos",
+      "name": "photos",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:1984/photos/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984",
+          "path": ["photos", ""]
+        }
       },
       "response": []
     },
     {
-      "name": "error",
+      "name": "Not Found",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:1984/error",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984",
+          "path": ["error"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete photo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:1984/photos/6563691ee627443259cf3cf6",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984",
+          "path": ["photos", "6563691ee627443259cf3cf6"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post photo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\n            \"title\": \"Novedad\",\n            \"author\": \"Anónimo\",\n            \"year\": \"2023\",\n            \"location\": \"Barcelona\",\n            \"publicSpace\": \"Street\",\n            \"category\": \"Long shot\",\n            \"portfolioUrl\": \"eldelasfotos.com\",\n            \"whatMadeYouClick\": \"It was amazing!\",\n            \"photoUrl\": \"https://i.ibb.co/dgbFHdh/ghost.webp\"\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1984/photos/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984",
+          "path": ["photos", "add"]
+        }
       },
       "response": []
     }

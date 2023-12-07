@@ -1,6 +1,6 @@
-import { type PhotosData } from "../repository/types";
+import { type PhotosStructure } from "../repository/types";
 
-const photosMock: PhotosData[] = [
+const photosMock: PhotosStructure[] = [
   {
     _id: "65635f70e627443259cf3ce2",
     title: "Ghost",
