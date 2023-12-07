@@ -1,5 +1,8 @@
 import type { NextFunction, Request, Response } from "express";
-import { type PhotosRepository } from "../repository/types.js";
+import {
+  type PhotosRequestWithoutId,
+  type PhotosRepository,
+} from "../repository/types.js";
 import CustomError from "../../../server/CustomError/CustomError.js";
 
 class PhotosController {
@@ -23,6 +26,23 @@ class PhotosController {
       res.status(200).json({});
     } catch {
       const error = new CustomError("Error deleting this photograph", 400);
+      next(error);
+    }
+  };
+
+  public addPhoto = async (
+    req: PhotosRequestWithoutId,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
+    try {
+      const photo = req.body;
+
+      const photoWithoutId = await this.photosRepository.addPhoto(photo);
+      res.status(201).json({ photo: photoWithoutId });
+    } catch {
+      const error = new CustomError("Error adding a new photo", 400);
+
       next(error);
     }
   };
