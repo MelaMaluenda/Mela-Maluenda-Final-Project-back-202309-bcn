@@ -8,21 +8,9 @@
   "item": [
     {
       "name": "ping",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
       "request": {
         "method": "GET",
         "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "\"url\": {\n          \"raw\": \"http://localhost:1984/photos\",\n          \"protocol\": \"http\",\n          \"host\": [\"localhost\"],\n          \"port\": \"1984\",\n          \"path\": [\"\"]\n        }",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
         "url": {
           "raw": "http://localhost:1984",
           "protocol": "http",
@@ -34,21 +22,9 @@
     },
     {
       "name": "photos",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
       "request": {
         "method": "GET",
         "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "\"url\": {\n          \"raw\": \"http://localhost:1984/photos\",\n          \"protocol\": \"http\",\n          \"host\": [\"localhost\"],\n          \"port\": \"1984\",\n          \"path\": [\"photos\"]\n        }",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
         "url": {
           "raw": "http://localhost:1984/photos/",
           "protocol": "http",
@@ -61,21 +37,9 @@
     },
     {
       "name": "Not Found",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
       "request": {
         "method": "GET",
         "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "\"url\": {\n          \"raw\": \"http://localhost:1984/photos\",\n          \"protocol\": \"http\",\n          \"host\": [\"localhost\"],\n          \"port\": \"1984\",\n          \"path\": [\"/error\"]\n        }",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
         "url": {
           "raw": "http://localhost:1984/error",
           "protocol": "http",
@@ -91,9 +55,24 @@
       "request": {
         "method": "DELETE",
         "header": [],
+        "url": {
+          "raw": "http://localhost:1984/photos/6563691ee627443259cf3cf6",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984",
+          "path": ["photos", "6563691ee627443259cf3cf6"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post photo",
+      "request": {
+        "method": "POST",
+        "header": [],
         "body": {
           "mode": "raw",
-          "raw": "\"url\": {\n          \"raw\": \"http://localhost:1984/photos/6563691ee627443259cf3cf6\",\n          \"protocol\": \"http\",\n          \"host\": [\"localhost\"],\n          \"port\": \"1984\",\n          \"path\": [\"photos/6563691ee627443259cf3cf6\"]\n        }",
+          "raw": " {\n            \"title\": \"Novedad\",\n            \"author\": \"Anónimo\",\n            \"year\": \"2023\",\n            \"location\": \"Barcelona\",\n            \"publicSpace\": \"Street\",\n            \"category\": \"Long shot\",\n            \"portfolioUrl\": \"eldelasfotos.com\",\n            \"whatMadeYouClick\": \"It was amazing!\",\n            \"photoUrl\": \"https://i.ibb.co/dgbFHdh/ghost.webp\"\n        }",
           "options": {
             "raw": {
               "language": "json"
@@ -101,11 +80,11 @@
           }
         },
         "url": {
-          "raw": "http://localhost:1984/photos/6563691ee627443259cf3cf6",
+          "raw": "http://localhost:1984/photos/add",
           "protocol": "http",
           "host": ["localhost"],
           "port": "1984",
-          "path": ["photos", "6563691ee627443259cf3cf6"]
+          "path": ["photos", "add"]
         }
       },
       "response": []
