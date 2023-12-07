@@ -5,7 +5,7 @@ import photosMock from "../../mock/photosMock";
 import { app } from "../../../../server/app";
 import type { PhotosStructure } from "../../repository/types";
 
-describe("Given GET /contest endpoint", () => {
+describe("Given GET /photos endpoint", () => {
   describe("When it receives a request", () => {
     test("Then it should respond with a status 200 and a list o photos: Ghost, Urban angel, Deep thoughts", async () => {
       const expectedStatus = 200;
