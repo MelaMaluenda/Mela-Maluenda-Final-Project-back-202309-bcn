@@ -1,9 +1,13 @@
 import { Error } from "mongoose";
 import Photo from "../model/Photo.js";
-import type { PhotosData, PhotosRepository } from "./types.js";
+import type {
+  PhotosStructure,
+  PhotosRepository,
+  PhotosStructureWithoutId,
+} from "./types.js";
 
 class PhotosMongosooseRepository implements PhotosRepository {
-  public async getPhotos(): Promise<PhotosData[]> {
+  public async getPhotos(): Promise<PhotosStructure[]> {
     const photos = await Photo.find().limit(10);
 
     return photos;
@@ -19,7 +23,9 @@ class PhotosMongosooseRepository implements PhotosRepository {
     }
   }
 
-  public async addPhoto(photo: PhotosData): Promise<PhotosData> {
+  public async addPhoto(
+    photo: PhotosStructureWithoutId,
+  ): Promise<PhotosStructure> {
     try {
       const newPhoto = await Photo.create(photo);
       return newPhoto;

@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
-import type { PhotosData } from "../repository/types";
+import type { PhotosStructure } from "../repository/types";
 
-const photoSchema = new Schema<PhotosData>({
+const photoSchema = new Schema<PhotosStructure>({
   title: {
     type: String,
     required: true,
