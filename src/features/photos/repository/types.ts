@@ -17,6 +17,8 @@ export interface PhotosStructure {
 
 export type PhotosStructureWithoutId = Omit<PhotosStructure, "_id">;
 
+export type PhotosStructureWithoutName = Omit<PhotosStructure, "id" | "name">;
+
 export type PhotosRequestWithoutId = Request<
   Record<string, unknown>,
   Record<string, unknown>,
