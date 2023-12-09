@@ -20,9 +20,13 @@ describe("Given GET /photos endpoint", () => {
         .expect(expectedStatus);
 
       const responseBody = response.body as { photos: PhotosStructure[] };
+      const invertPhotosMock = photosMock.reverse();
 
       responseBody.photos.forEach((photo, photoPosition) => {
-        expect(photo).toHaveProperty("title", photosMock[photoPosition].title);
+        expect(photo).toHaveProperty(
+          "title",
+          invertPhotosMock[photoPosition].title,
+        );
       });
     });
   });
