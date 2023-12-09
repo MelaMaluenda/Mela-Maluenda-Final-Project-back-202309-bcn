@@ -6,7 +6,7 @@ export interface PhotosStructure {
   _id: string;
   title: string;
   author: string;
-  year: string;
+  year: number;
   location: string;
   publicSpace: string;
   category: Category;

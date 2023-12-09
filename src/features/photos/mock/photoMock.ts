@@ -3,7 +3,7 @@ import { type PhotosStructureWithoutId } from "../repository/types";
 const photoMock: PhotosStructureWithoutId = {
   title: "Ghost",
   author: "Enrique Muda",
-  year: "2018",
+  year: 2018,
   location: "Sicilia",
   publicSpace: "Street",
   category: "Long shot",
