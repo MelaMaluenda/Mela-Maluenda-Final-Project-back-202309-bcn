@@ -2,7 +2,7 @@ import type { PhotosStructureWithoutTitle } from "../repository/types";
 
 const photoMockWithoutTitle: PhotosStructureWithoutTitle = {
   author: "Enrique Muda",
-  year: "2018",
+  year: 2018,
   location: "Sicilia",
   publicSpace: "Street",
   category: "Long shot",

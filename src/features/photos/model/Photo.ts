@@ -11,7 +11,7 @@ const photoSchema = new Schema<PhotosStructure>({
     required: true,
   },
   year: {
-    type: String,
+    type: Number,
     required: true,
   },
   location: {
