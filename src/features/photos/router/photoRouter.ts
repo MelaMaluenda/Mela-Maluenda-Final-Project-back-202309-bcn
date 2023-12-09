@@ -14,4 +14,6 @@ photoRouter.delete("/:photoId", photoController.deletePhoto);
 
 photoRouter.post("/add", photoValidation, photoController.addPhoto);
 
+photoRouter.get("/:photoId", photoController.getPhotoById);
+
 export default photoRouter;
