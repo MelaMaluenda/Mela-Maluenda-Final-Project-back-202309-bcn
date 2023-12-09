@@ -46,6 +46,23 @@ class PhotosController {
       next(error);
     }
   };
+
+  public getPhotoById = async (
+    req: Request<{ photoId: string }>,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
+    try {
+      const { photoId } = req.params;
+
+      const photo = await this.photosRepository.getPhotoById(photoId);
+      res.status(200).json({ photo });
+    } catch {
+      const customError = new CustomError("Error findig the photo", 400);
+
+      next(customError);
+    }
+  };
 }
 
 export default PhotosController;
