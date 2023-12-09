@@ -8,7 +8,7 @@ import type {
 
 class PhotosMongosooseRepository implements PhotosRepository {
   public async getPhotos(): Promise<PhotosStructure[]> {
-    const photos = await Photo.find().limit(10);
+    const photos = await Photo.find().limit(10).sort({ _id: -1 });
 
     return photos;
   }
