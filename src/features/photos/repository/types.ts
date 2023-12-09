@@ -28,6 +28,8 @@ export type PhotosRequestWithoutId = Request<
   PhotosStructureWithoutId
 >;
 
+export type PhotoRequestById = Request<{ photoId: string }>;
+
 export interface PhotosRepository {
   getPhotos: () => Promise<PhotosStructure[]>;
   deletePhoto: (photoId: string) => Promise<void>;
