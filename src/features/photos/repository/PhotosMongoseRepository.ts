@@ -33,6 +33,16 @@ class PhotosMongosooseRepository implements PhotosRepository {
       throw new Error("Error adding a new photo" + (error as Error).message);
     }
   }
+
+  public async getPhotoById(photoId: string): Promise<PhotosStructure> {
+    try {
+      const photo = await Photo.findById(photoId);
+
+      return photo!;
+    } catch (error) {
+      throw new Error("Error findig the photo" + (error as Error).message);
+    }
+  }
 }
 
 export default PhotosMongosooseRepository;
