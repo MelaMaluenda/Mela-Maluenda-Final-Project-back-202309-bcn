@@ -35,4 +35,8 @@ export interface PhotosRepository {
   deletePhoto: (photoId: string) => Promise<void>;
   addPhoto: (photo: PhotosStructureWithoutId) => Promise<PhotosStructure>;
   getPhotoById: (id: string) => Promise<PhotosStructure>;
+  modifyPhoto: (
+    id: string,
+    photo: PhotosStructure,
+  ) => Promise<PhotosStructure | undefined>;
 }

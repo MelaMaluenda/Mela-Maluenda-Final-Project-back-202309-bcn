@@ -43,6 +43,23 @@ class PhotosMongosooseRepository implements PhotosRepository {
       throw new Error("Error findig the photo" + (error as Error).message);
     }
   }
+
+  public async modifyPhoto(
+    id: string,
+    photo: PhotosStructure,
+  ): Promise<PhotosStructure | undefined> {
+    try {
+      const photoModified = await Photo.findByIdAndUpdate(
+        id,
+        { ...photo },
+        { returnDocument: "after" },
+      );
+
+      return photoModified!;
+    } catch (error) {
+      throw new Error("Error to modify data photo" + (error as Error).message);
+    }
+  }
 }
 
 export default PhotosMongosooseRepository;
