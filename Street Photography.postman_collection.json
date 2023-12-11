@@ -72,7 +72,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": " {\n            \"title\": \"Novedad\",\n            \"author\": \"Anónimo\",\n            \"year\": \"2023\",\n            \"location\": \"Barcelona\",\n            \"publicSpace\": \"Street\",\n            \"category\": \"Long shot\",\n            \"portfolioUrl\": \"eldelasfotos.com\",\n            \"whatMadeYouClick\": \"It was amazing!\",\n            \"photoUrl\": \"https://i.ibb.co/dgbFHdh/ghost.webp\"\n        }",
+          "raw": " {\n            \"title\": \"Novedad\",\n            \"author\": \"Anónimo\",\n            \"year\": 2023,\n            \"location\": \"Barcelona\",\n            \"publicSpace\": \"Street\",\n            \"category\": \"Long shot\",\n            \"portfolioUrl\": \"eldelasfotos.com\",\n            \"whatMadeYouClick\": \"It was amazing!\",\n            \"photoUrl\": \"https://i.ibb.co/dgbFHdh/ghost.webp\"\n        }",
           "options": {
             "raw": {
               "language": "json"
@@ -85,6 +85,30 @@
           "host": ["localhost"],
           "port": "1984",
           "path": ["photos", "add"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Patch photo",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "         {\n            \"_id\": \"6575c12e6ebe2810da0205b0\",\n            \"title\": \"Segunda prueba\",\n            \"author\": \"Mismo\",\n            \"year\": 2023,\n            \"location\": \"World\",\n            \"publicSpace\": \"Galery\",\n            \"category\": \"Long shot\",\n            \"portfolioUrl\": \"http://www.eldelasfotos.com\",\n            \"whatMadeYouClick\": \"Something\",\n            \"photoUrl\": \"https://eldelasfotos.com/wp-content/uploads/2023/09/fotografia-artistica-manhattan-nueva-york.jpeg\",\n            \"__v\": 0\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1984/photos/6575c12e6ebe2810da0205b0",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "1984",
+          "path": ["photos", "6575c12e6ebe2810da0205b0"]
         }
       },
       "response": []
