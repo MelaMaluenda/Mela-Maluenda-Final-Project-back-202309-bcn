@@ -16,4 +16,6 @@ photoRouter.post("/add", photoValidation, photoController.addPhoto);
 
 photoRouter.get("/:photoId", photoController.getPhotoById);
 
+photoRouter.patch("/:photoId", photoController.modifyPhoto);
+
 export default photoRouter;
