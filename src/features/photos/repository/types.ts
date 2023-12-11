@@ -28,6 +28,12 @@ export type PhotosRequestWithoutId = Request<
   PhotosStructureWithoutId
 >;
 
+export type PhotoRequestWithId = Request<
+  { photoId: string },
+  Record<string, unknown>,
+  PhotosStructure
+>;
+
 export type PhotoRequestById = Request<{ photoId: string }>;
 
 export interface PhotosRepository {

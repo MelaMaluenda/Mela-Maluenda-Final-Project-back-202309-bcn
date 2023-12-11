@@ -2,6 +2,7 @@ import type { NextFunction, Request, Response } from "express";
 import {
   type PhotosRequestWithoutId,
   type PhotosRepository,
+  type PhotoRequestWithId,
 } from "../repository/types.js";
 import CustomError from "../../../server/CustomError/CustomError.js";
 
@@ -59,6 +60,28 @@ class PhotosController {
       res.status(200).json({ photo });
     } catch {
       const customError = new CustomError("Error findig the photo", 400);
+
+      next(customError);
+    }
+  };
+
+  public modifyPhoto = async (
+    req: PhotoRequestWithId,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
+    try {
+      const photo = req.body;
+      const { photoId } = req.params;
+
+      const photoModified = await this.photosRepository.modifyPhoto(
+        photoId,
+        photo,
+      );
+
+      res.status(200).json({ photo: photoModified });
+    } catch {
+      const customError = new CustomError("Error to modify data photo", 400);
 
       next(customError);
     }
