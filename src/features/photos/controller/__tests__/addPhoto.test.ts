@@ -26,6 +26,7 @@ describe("Given a PhotosController addPhoto method", () => {
       deletePhoto: jest.fn(),
       addPhoto: jest.fn().mockResolvedValue({ photoMock }),
       getPhotoById: jest.fn(),
+      modifyPhoto: jest.fn(),
     };
 
     test("Then it should call its status method with code 201", async () => {
@@ -59,6 +60,7 @@ describe("Given a PhotosController addPhoto method", () => {
         deletePhoto: jest.fn(),
         addPhoto: jest.fn().mockRejectedValue(undefined),
         getPhotoById: jest.fn(),
+        modifyPhoto: jest.fn(),
       };
 
       const expectedError: Partial<CustomError> = {
