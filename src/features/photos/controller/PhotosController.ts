@@ -40,6 +40,7 @@ class PhotosController {
       const photo = req.body;
 
       const photoWithoutId = await this.photosRepository.addPhoto(photo);
+
       res.status(201).json({ photo: photoWithoutId });
     } catch {
       const error = new CustomError("Error adding a new photo", 400);
@@ -57,6 +58,7 @@ class PhotosController {
       const { photoId } = req.params;
 
       const photo = await this.photosRepository.getPhotoById(photoId);
+
       res.status(200).json({ photo });
     } catch {
       const customError = new CustomError("Error findig the photo", 400);
